@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const signUpButton = document.querySelector('.toggle-left .btn');
     const signInButton = document.querySelector('.toggle-right .btn');
@@ -71,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         signInForm.reset();
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".container");
@@ -164,4 +164,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 })
-

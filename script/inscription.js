@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
     console.log("Inscription script loaded");
     // Sélectionner le formulaire
     const form = document.querySelector("form");
-    
     // Sélectionner les champs de formulaire par leur ID
-=======
+=========
     const form = document.querySelector("form");
->>>>>>> bris
+>>>>>>>>> Temporary merge branch 2
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const phoneInput = document.getElementById("phone");
 
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
     // Ajouter un événement de soumission au formulaire
     form.addEventListener("submit", function(event) {
         // Initialiser la validité du formulaire à true
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Si le format du téléphone est incorrect, marquer le formulaire comme invalide
                 valid = false;
                 // Ajouter un message d'erreur
-=======
+=========
     form.addEventListener("submit", function(event) {
         let valid = true;
         let messages = [];
@@ -87,21 +86,21 @@ document.addEventListener("DOMContentLoaded", function() {
             const phonePattern = /^\+?\d{7,15}$/;
             if (!phonePattern.test(phoneInput.value.trim())) {
                 valid = false;
->>>>>>> bris
+>>>>>>>>> Temporary merge branch 2
                 messages.push("Le numéro de téléphone n'est pas valide.");
             }
         }
 
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
         // Si le formulaire n'est pas valide, empêcher la soumission et afficher les messages d'erreur
         if (!valid) {
             // Empêcher l'envoi par défaut du formulaire
             event.preventDefault();
             // Afficher les messages d'erreur dans une alerte
-=======
+=========
         if (!valid) {
             event.preventDefault();
->>>>>>> bris
+>>>>>>>>> Temporary merge branch 2
             alert(messages.join("\n"));
         }
     });

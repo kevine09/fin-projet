@@ -4,20 +4,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* New gradient background */
+
     font-family: 'Lato', sans-serif; /* Utilisation de la police Lato */
     box-sizing: border-box;
 }
 
 body {
     background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* Nouveau fond en dégradé */
-=======
-    font-family: 'Montserrat', sans-serif;
-}
 
-body {
-    background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* New gradient background */
->>>>>>> bris
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,10 +32,9 @@ body {
     width: 400px;
     max-width: 100%;
     padding: 20px;
-<<<<<<< HEAD
+
     margin:auto;
-=======
->>>>>>> bris
+
 }
 
 h1 {
@@ -47,11 +46,11 @@ h1 {
 }
 
 .form-group {
-<<<<<<< HEAD
-    margin-bottom: 20px; /* Marge augmentée pour un meilleur espacement */
-=======
+
     margin-bottom: 15px;
->>>>>>> bris
+
+    margin-bottom: 20px; /* Marge augmentée pour un meilleur espacement */
+
 }
 
 .form-group label {
@@ -61,12 +60,12 @@ h1 {
     color: #333;
 }
 
-<<<<<<< HEAD
+
+.form-group input {
+
 .form-group input,
 .form-group textarea {
-=======
-.form-group input {
->>>>>>> bris
+
     width: calc(100% - 30px);
     padding: 12px 15px;
     background-color: #f9f9f9;
@@ -77,7 +76,10 @@ h1 {
     transition: border-color 0.3s ease;
 }
 
-<<<<<<< HEAD
+
+.form-group input:focus {
+    border-color: #007BFF;
+
 .form-group textarea {
     resize: vertical; /* Permet le redimensionnement vertical du textarea */
 }
@@ -85,10 +87,7 @@ h1 {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: rgb(211, 120, 131); ;
-=======
-.form-group input:focus {
-    border-color: #007BFF;
->>>>>>> bris
+
 }
 
 button {
@@ -101,29 +100,29 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-<<<<<<< HEAD
-    transition:  background 0.3s ease;
-=======
+
     transition: background-color 0.3s ease;
->>>>>>> bris
+
+    transition:  background 0.3s ease;
+
     width: 100%;
     margin-top: 10px;
 }
 
 button:hover {
-<<<<<<< HEAD
-    background-color: rgb(211, 120, 131); /* Rose plus clair au survol */
-}
 
-a {
-    color: rgb(211, 120, 131);
-=======
     background-color: #e67e8b; /* Rose plus clair au survol */
 }
 
 a {
     color: #007BFF;
->>>>>>> bris
+
+    background-color: rgb(211, 120, 131); /* Rose plus clair au survol */
+}
+
+a {
+    color: rgb(211, 120, 131);
+
     font-size: 14px;
     text-decoration: none;
     text-align: center;
@@ -132,16 +131,20 @@ a {
 }
 
 a:hover {
-<<<<<<< HEAD
-    color: rgb(211, 120, 131); 
-=======
+
     color: #0056b3;
->>>>>>> bris
+
+    color: rgb(211, 120, 131); 
+
 }
 
 @media screen and (max-width: 768px) {
     .container {
-<<<<<<< HEAD
+
+        width: 90%;
+    }
+}
+
         width: 100%;
         border-radius: 0;
     }
@@ -149,8 +152,4 @@ a:hover {
         width: 100%;
     }
 }
-=======
-        width: 90%;
-    }
-}
->>>>>>> bris
+
