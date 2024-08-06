@@ -299,9 +299,14 @@ nav ul.menu li {
 
 
 .floating-image img {
+
   width: 75px; /* Ajustez la taille de l'image selon vos besoins */
   transition: transform 0.3s ease-in-out;
   padding-right: 100%;
+
+  width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+  transition: transform 0.3s ease-in-out;
+
 }
 
 .floating-image:hover img {

@@ -1,4 +1,5 @@
 
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Contact script loaded");
     
@@ -43,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Fonctionnalité de connexion sociale en cours de développement.');
        });
     });
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
