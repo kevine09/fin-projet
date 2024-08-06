@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Contact script loaded");
     
@@ -44,10 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Fonctionnalité de connexion sociale en cours de développement.');
        });
     });
-=======
-=======
-
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".container");
     const signInButton = document.querySelector(".toggle-left .btn.hidden");
@@ -133,10 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(error.message || 'Une erreur inconnue s\'est produite.');
         }
     }
-<<<<<<< HEAD
->>>>>>> bris
-=======
-=======
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Contact script loaded");
     
@@ -181,5 +172,3 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Fonctionnalité de connexion sociale en cours de développement.');
        });
     });
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
-});

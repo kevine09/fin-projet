@@ -4,9 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
     font-family: 'Montserrat', sans-serif;
 }
@@ -14,24 +12,19 @@
 body {
     background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* New gradient background */
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
     font-family: 'Lato', sans-serif; /* Utilisation de la police Lato */
     box-sizing: border-box;
 }
 
 body {
     background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* Nouveau fond en dégradé */
-<<<<<<< HEAD
-=======
+
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
     background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* New gradient background */
->>>>>>> bris
-=======
-
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,16 +39,16 @@ body {
     width: 400px;
     max-width: 100%;
     padding: 20px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    margin:auto;
-=======
->>>>>>> bris
-=======
 
     margin:auto;
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
+    margin:auto;
+
+
+    margin:auto;
+
+
 }
 
 h1 {
@@ -67,19 +60,22 @@ h1 {
 }
 
 .form-group {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     margin-bottom: 20px; /* Marge augmentée pour un meilleur espacement */
-=======
+
     margin-bottom: 15px;
->>>>>>> bris
-=======
+
 
     margin-bottom: 15px;
 
     margin-bottom: 20px; /* Marge augmentée pour un meilleur espacement */
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
+
+    margin-bottom: 15px;
+
+    margin-bottom: 20px; /* Marge augmentée pour un meilleur espacement */
+
 }
 
 .form-group label {
@@ -89,21 +85,24 @@ h1 {
     color: #333;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .form-group input,
 .form-group textarea {
-=======
 .form-group input {
->>>>>>> bris
-=======
+
 
 .form-group input {
 
 .form-group input,
 .form-group textarea {
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
+
+.form-group input {
+
+.form-group input,
+.form-group textarea {
+
     width: calc(100% - 30px);
     padding: 12px 15px;
     background-color: #f9f9f9;
@@ -114,14 +113,12 @@ h1 {
     transition: border-color 0.3s ease;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 .form-group input:focus {
     border-color: #007BFF;
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
 .form-group textarea {
     resize: vertical; /* Permet le redimensionnement vertical du textarea */
 }
@@ -129,14 +126,11 @@ h1 {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: rgb(211, 120, 131); ;
-<<<<<<< HEAD
-=======
+
 .form-group input:focus {
     border-color: #007BFF;
->>>>>>> bris
-=======
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
 }
 
 button {
@@ -149,43 +143,36 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     transition:  background 0.3s ease;
-=======
     transition: background-color 0.3s ease;
->>>>>>> bris
-=======
 
     transition: background-color 0.3s ease;
-=======
+
     transition:  background 0.3s ease;
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
+
+    transition: background-color 0.3s ease;
+    transition:  background 0.3s ease;
+
     width: 100%;
     margin-top: 10px;
 }
 
 button:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     background-color: rgb(211, 120, 131); /* Rose plus clair au survol */
 }
 
 a {
     color: rgb(211, 120, 131);
-=======
-=======
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
     background-color: #e67e8b; /* Rose plus clair au survol */
 }
 
 a {
     color: #007BFF;
-<<<<<<< HEAD
->>>>>>> bris
-=======
 
     background-color: rgb(211, 120, 131); /* Rose plus clair au survol */
 }
@@ -193,7 +180,7 @@ a {
 a {
     color: rgb(211, 120, 131);
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
     font-size: 14px;
     text-decoration: none;
     text-align: center;
@@ -202,32 +189,29 @@ a {
 }
 
 a:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     color: rgb(211, 120, 131); 
-=======
     color: #0056b3;
->>>>>>> bris
-=======
 
     color: #0056b3;
 
     color: rgb(211, 120, 131); 
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+    color: #0056b3;
+
+    color: rgb(211, 120, 131); 
+
 }
 
 @media screen and (max-width: 768px) {
     .container {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
         width: 90%;
     }
 }
 
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1
+
         width: 100%;
         border-radius: 0;
     }
@@ -235,12 +219,7 @@ a:hover {
         width: 100%;
     }
 }
-<<<<<<< HEAD
-=======
+
         width: 90%;
     }
 }
->>>>>>> bris
-=======
-
->>>>>>> 67f70dadf848502bcbe11d43e8ee0e022b425af1

@@ -12,6 +12,21 @@ body {
     background: white;
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(211, 120, 131);
+    transition: all 0.3s ease-in-out;
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.8) url("../images/loader.png") no-repeat center center;
+}
+
+#content {
+    display: none;
 }
 
 /* Header and Navigation Styles */
@@ -29,6 +44,30 @@ header .container {
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+header.scrolled {
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+  transition: opacity 1s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .loaded {
+    opacity: 1;
+  }
 
 .wrapper, nav ul {
     display: flex;
@@ -178,7 +217,12 @@ ul {
         display: block;
         padding: 10px;
         border-bottom: 1px solid #fff;
+        transition: color 0.3s ease-in-out;
     }
+
+    nav ul li a:hover {
+        color: #fff;
+      }
 
     .wrapper.active {
         display: flex;
@@ -226,7 +270,16 @@ ul {
     height: 280px;
     border-radius: 15px 15px 0 0;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
+
+.zoom {
+    transform: scale(1.2);
+  }
+  
+.food-items img:hover {
+    transform: scale(1.1);
+  }
 
 h1 {
     grid-column: 1/-1;
@@ -275,6 +328,27 @@ h1 {
 
 .details>.btn:hover {
     background-color: rgba(239, 108, 130, 0.838);
+}
+
+.btn:hover {
+    background-color: #e06666;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(211, 120, 131);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
 }
 
 /* Footer Styles */
