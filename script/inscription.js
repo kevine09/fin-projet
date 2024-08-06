@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
 
     const form = document.querySelector("form");
 
@@ -6,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Sélectionner le formulaire
     const form = document.querySelector("form");
     // Sélectionner les champs de formulaire par leur ID
+
+    const form = document.querySelector("form");
 
     const form = document.querySelector("form");
 
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 valid = false;
 
 
+ 
     // Ajouter un événement de soumission au formulaire
     form.addEventListener("submit", function(event) {
         // Initialiser la validité du formulaire à true
@@ -84,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Si le format du téléphone est incorrect, marquer le formulaire comme invalide
                 valid = false;
                 // Ajouter un message d'erreur
-
     form.addEventListener("submit", function(event) {
         let valid = true;
         let messages = [];
@@ -123,11 +126,19 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
 
 
+        if (!valid) {
+            event.preventDefault();
+
+
         // Si le formulaire n'est pas valide, empêcher la soumission et afficher les messages d'erreur
         if (!valid) {
             // Empêcher l'envoi par défaut du formulaire
             event.preventDefault();
             // Afficher les messages d'erreur dans une alerte
+
+        if (!valid) {
+            event.preventDefault();
+
 
         if (!valid) {
             event.preventDefault();
