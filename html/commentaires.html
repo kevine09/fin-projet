@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suggestions et Commentaires</title>
-    <link rel="stylesheet" href="../style/sugg.css">
+    <link rel="stylesheet" href="../style/commentaires.css">
+    <script src="../script/commentaires.js" ></script>
 </head>
 <body>
     <header>
         <div class="wrapper">
             <div class="logo"><a href="#">Delices <span>Gourmets</span></a></div>
             <nav>
-                <ul><!-- les onglets ou liens de navigation dans le header ici sont les memes que pour 
-                    le fichier index pour maintenir la coherence dans le css-->
+                <ul> 
                     <li> <a href="../index.html"> Accueil</a></li>
                     <li><a href="../html/plats.html">Nos plats</a></li>
                     <li> <a href="../html/about.html"> A propos de nous</a></li>
@@ -40,21 +40,23 @@
             <div class="zone-id">
                 <div class="zone-nom">
                     <label for="first-name" class="form-id">prénom:</label>
-                    <input type="text" id="first-name" name="first-name" class="zone-input" required>
+                    <input type="text" id="first-name" name="first-name" class="zone-input">
                 </div>
                 <div class="zone-prenom">
                     <label for="last-name" class="form-id">nom:</label>
-                    <input type="text" id="last-name" name="last-name" class="zone-input" required>
+                    <input type="text" id="last-name" name="last-name" class="zone-input">
                 </div>
             </div>
             <div class="zone-com">
                 <label for="comment" class="form-com">commentaire:</label>
-                <textarea id="comment" name="comment" class="zone-textarea" rows="4" required></textarea>
+                <textarea id="comment" name="comment" class="zone-textarea" rows="4"></textarea>
             </div>
             <div class="zone-bouton">
                 <button type="submit" class="form-button">soumettre</button>
             </div>
         </form>
+        <div id="error_msg" class="error-message">Veuillez remplir tous les champs.</div>
+        <div id="success_msg" class="success-message" >Votre commentaire a été envoyé avec succès!</div>
     </div>
     <footer class="footer">
         <div class="container-2">
@@ -105,12 +107,10 @@
                         &copy; 2024 BentoBox <br> design by kevine,gloria,johnathan,bouba
                      </p>
                      <div class="projet">
-                        <a href="https://github.com/kevine09/fin-projet.git" class="button-link">Consulter notre projet ici</a>
-
                         <a href="https://github.com/kevine09/projet.git" class="button-link">Consulter notre projet ici</a>
-
                     </div>                </div>
             </div>
+            
     </footer>
 </body>
 </html>

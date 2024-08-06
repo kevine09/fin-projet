@@ -1,18 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: rgb(190, 100, 110);
+    padding: 0;
+    background-color: rgb(190, 100, 110);;
 }
 
 header {
     background: black;
     color: #fff;
     padding: 1rem 0;
-    position: relative;
-    z-index: 1000;
-    margin-bottom: 20px;
 }
 
 header .container {
@@ -23,88 +20,84 @@ header .container {
     margin: 0 auto;
     padding: 0 1rem;
 }
-
 header h1 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
 
-.wrapper, nav ul {
-    display: flex;
-    justify-content: space-between;
+ .wrapper,nav ul {
+    display: flex; /*Utiliser en flexbox*/
+    justify-content: space-between; /*Allignement horizontal du contenu*/
 }
 
-ul {
+ul{
     padding: 0;
 }
 
-.wrapper {
-    align-items: center;
+ .wrapper {
+    align-items: center; /*Alignement veritical du contenu*/
 }
 
-.wrapper a {
-    text-decoration: dashed;
+.wrapper a {   /* Tous les liens qui se trouvent dans le header*/
+    text-decoration:dashed;  /* soulignage des liens*/
     color: #fff;
-    text-transform: capitalize;
-    text-align: right;
-    font-size: larger;
-}
-
-.wrapper li {
-    list-style: none;
-    margin-right: 25px;
+    text-transform: capitalize;  /*Premiere lettre en majuscule*/
     text-align: right;
 }
 
-.logo a {
+.wrapper li {              /*Tous les elements de liste dans le header*/
+    list-style: none;    /*Enlever les points devant les elements de liste*/
+    margin-right: 25px;  /* Espace entre les elements de liste*/
+    text-align:right;
+}
+
+.logo a {    /* Tous les liens dans le div du logo*/
     font-size: 2rem;
     text-transform: uppercase;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
-.logo {
+}
+.logo{
     color: #fff;
-    padding: 15px
 }
-
 .logo span {
     color: rgb(211, 120, 131);
 }
 
-.search-section {
+/*.search-section .wrapper{ /*la zone de recherche de recettes*/
+.search-section{ /*la zone de reserche de recettes*/
     text-align: right;
     padding: 5px;
     margin-right: 25px;
 }
-
-.icon {
-    width: 15px;
-    height: 15px;
-    margin-right: 0rem;
-    vertical-align: middle;
+    
+.icon{
+    width: 15px; /* Ajustez la taille de l'icône selon les besoins */
+    height: 15px; /* Ajustez la taille de l'icône selon les besoins */
+    margin-right: 0rem; /* Espace entre l'icône et le texte */
+    vertical-align: middle; /* Centre verticalement l'icône avec le texte */
+        
 }
-
 .compte-button {
     position: relative;
     display: inline-block;
     cursor: pointer;
     background-color: rgb(211, 120, 131);
 }
-
+      
 .compte-button a {
     text-decoration: none;
-    color: rgb(5, 5, 5);
+    color: rgb(5, 5, 5); /* Couleur du texte Contact */
     display: flex;
-    align-items: center;
+    align-items: center; /* Aligner le texte et l'icône verticalement */
 }
-
+      
 .compte-button .icon {
     width: 20px;
     height: 20px;
-    margin-left: 5px;
+    margin-left: 5px; /* Espacement entre le texte et l'icône */
     background-color: rgb(211, 120, 131);
 }
-
+      
 .dropdown-content {
     display: none;
     position: absolute;
@@ -113,84 +106,89 @@ ul {
     box-shadow: 0 2px 5px rgb(7, 7, 7);
     z-index: 1;
 }
-
+      
 .compte-button:hover .dropdown-content {
     display: block;
 }
-
+      
 .dropdown-content a {
     display: block;
     padding: 10px;
     text-decoration: none;
     background-color: rgb(211, 120, 131);
     color: #0d0d0d;
-    text-transform: capitalize;
 }
-
+      
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+    
 
-.container-3 {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    min-height: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titre {
     text-align: center;
-}
-
-h1 {
-    font-size: 2.5em;
     color: #333;
-    margin-bottom: 20px;
     text-transform: capitalize;
 }
 
-.chef-info-container {
+.comment-form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.chef-info {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    flex: 1 0 30%;
-    max-width: 30%;
-    animation: animx 0.5s ease-in-out;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+.zone-id {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.chef-info:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.zone-nom, .zone-prenom {
+    width: 48%;
 }
 
-.chef-info img {
-    max-width: 72px;
-    height: auto;
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px;
+.zone-com{
+    margin-bottom: 20px;
 }
-
-.chef-info h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin: 10px 0;
+.form-id, .form-com {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
     text-transform: capitalize;
 }
 
-.chef-info p {
-    font-size: 1em;
-    color: #666;
-    margin: 5px 0;
+.zone-input, .zone-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(211, 120, 131);
+    transition: background-color 0.3s ease;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.form-button:hover {
+    background-color: rgb(190, 100, 110);
+}
+/* Footer Styles */
 footer {
     background-color: black; /* Couleur de fond noire pour tout le pied de page */
     padding: 20px 0; /* Ajout de padding en haut et en bas */
@@ -259,21 +257,24 @@ footer .social-icons li a img {
 footer .copyright {
     text-align: center;
     font-size: 14px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     color: #f1f1f1;
     width: 100%;
 }
 
+footer .project-button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
 footer .project-button {
-    display: block;
+    display: inline-block;
     background-color: rgb(211, 120, 131);
     color: black;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    text-align: center;
-    margin: 10px auto;
     border-radius: 5px;
     text-decoration: none;
 }
@@ -285,17 +286,45 @@ footer .project-button {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    text-align: center;
+    margin-left: 79%;
 }
 
 .button-link:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Changez cette couleur selon vos besoins */
 }
-
-
-body {
-    animation: changeColor 20s infinite;
+.footer-bottom p, .footer-bottom .button-link {
+    margin: 10px 0;
 }
+/* */
+#error_msg {
+    display: none;
+}
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+/* */
+#success_msg {
+    display: none;
+}
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    footer .col-md-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Responsive Menu */
 .menu-icon {
     display: none;
     font-size: 1.5rem;
@@ -329,27 +358,6 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .chef-info {
-        flex: 1 0 100%;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    footer .col-md-3 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .col-md-3 {
-        width: 100%;
-    }
-}
-
-/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 1200px) {
     header .container {
         padding: 0 20px;
@@ -423,6 +431,3 @@ body {
         justify-content: center;
     }
 }
-
-
-
