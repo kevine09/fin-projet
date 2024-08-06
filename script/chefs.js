@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Masquer le message après 4s
             setTimeout(() => {
                 chefSpecialtyElement.style.display = 'none';
-            }, 4000);
+            }, 3000);
         });
     });
 
