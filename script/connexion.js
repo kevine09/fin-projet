@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 })
-=======
 document.addEventListener('DOMContentLoaded', function() {
     const signUpButton = document.querySelector('.toggle-left .btn');
     const signInButton = document.querySelector('.toggle-right .btn');

@@ -1,91 +1,92 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Contact script loaded");
-    
-    // Ajouter un événement de soumission au formulaire
-    contactForm.addEventListener('submit', function(event) {
-        // Empêcher l'envoi par défaut du formulaire
-        event.preventDefault();
-
-        // Récupérer les valeurs des champs de formulaire
-        const name = contactForm.querySelector('input[type="text"]').value.trim();
-        const email = contactForm.querySelector('input[type="email"]').value.trim();
-        const message = contactForm.querySelector('textarea').value.trim();
-
-        
-        // Vérifier que tous les champs sont remplis
-        if (name === '' || email === '' || message === '') {
-            // Afficher une alerte si un ou plusieurs champs sont vides
-            alert('Veuillez remplir tous les champs.');
-            return;
-        }
-
-        // Afficher les valeurs des champs dans la console (pour le débogage)
-        console.log('Nom:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        // Réinitialiser le formulaire après l'envoi
-        contactForm.reset();
-        // Afficher un message de succès
-        alert('Votre message a été envoyé avec succès!');
-    });
-
-    // Sélectionner tous les liens sociaux
-    const socialLinks = document.querySelectorAll('.social-icons a');
-
-    // Ajouter un événement de clic à chaque lien social
-    socialLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Empêcher l'action par défaut du lien
-            event.preventDefault();
-            // Afficher un message d'alerte pour indiquer que la fonctionnalité est en cours de développement
-            alert('Fonctionnalité de connexion sociale en cours de développement.');
-       });
-    });
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Contact script loaded");
+
+    // Ajout d'un événement de soumission au formulaire de contact
+    const contactForm = document.querySelector('#contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = contactForm.querySelector('input[type="text"]').value.trim();
+            const email = contactForm.querySelector('input[type="email"]').value.trim();
+            const message = contactForm.querySelector('textarea').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Veuillez remplir tous les champs.');
+                return;
+            }
+
+            console.log('Nom:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            contactForm.reset();
+            alert('Votre message a été envoyé avec succès!');
+        });
+    }
+
+    // Ajout d'un événement de clic à chaque lien social
+    const socialLinks = document.querySelectorAll('.social-icons a');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            alert('Fonctionnalité de connexion sociale en cours de développement.');
+        });
+    });
+
+    // Gestion de l'animation des boutons de connexion et d'inscription
     const container = document.querySelector(".container");
     const signInButton = document.querySelector(".toggle-left .btn.hidden");
     const signUpButton = document.querySelector(".toggle-right .btn");
 
-    signInButton.addEventListener("click", () => {
-        container.classList.remove("active");
-    });
+    if (signInButton) {
+        signInButton.addEventListener("click", () => {
+            container.classList.remove("active");
+        });
+    }
 
-    signUpButton.addEventListener("click", () => {
-        container.classList.add("active");
-    });
+    if (signUpButton) {
+        signUpButton.addEventListener("click", () => {
+            container.classList.add("active");
+        });
+    }
 
+    // Gestion du formulaire de connexion
     const signInForm = document.querySelector(".sign-in-form");
-    signInForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const email = signInForm.querySelector("input[type='email']").value;
-        const password = signInForm.querySelector("input[type='password']").value;
+    if (signInForm) {
+        signInForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = signInForm.querySelector("input[type='email']").value;
+            const password = signInForm.querySelector("input[type='password']").value;
 
-        if (validateEmail(email) && validatePassword(password)) {
-            sendFormData('login', { email, password })
-                .then(response => displayMessage(response.message, "success"))
-                .catch(error => displayMessage(error.message, "error"));
-        } else {
-            displayMessage("Email ou mot de passe invalide", "error");
-        }
-    });
+            if (validateEmail(email) && validatePassword(password)) {
+                sendFormData('login', { email, password })
+                    .then(response => displayMessage(response.message, "success"))
+                    .catch(error => displayMessage(error.message, "error"));
+            } else {
+                displayMessage("Email ou mot de passe invalide", "error");
+            }
+        });
+    }
 
+    // Gestion du formulaire d'inscription
     const signUpForm = document.querySelector(".sign-up-form");
-    signUpForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = signUpForm.querySelector("input[type='text']").value;
-        const email = signUpForm.querySelector("input[type='email']").value;
-        const password = signUpForm.querySelector("input[type='password']").value;
+    if (signUpForm) {
+        signUpForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = signUpForm.querySelector("input[type='text']").value;
+            const email = signUpForm.querySelector("input[type='email']").value;
+            const password = signUpForm.querySelector("input[type='password']").value;
 
-        if (name && validateEmail(email) && validatePassword(password)) {
-            sendFormData('register', { name, email, password })
-                .then(response => displayMessage(response.message, "success"))
-                .catch(error => displayMessage(error.message, "error"));
-        } else {
-            displayMessage("Veuillez remplir tous les champs correctement", "error");
-        }
-    });
+            if (name && validateEmail(email) && validatePassword(password)) {
+                sendFormData('register', { name, email, password })
+                    .then(response => displayMessage(response.message, "success"))
+                    .catch(error => displayMessage(error.message, "error"));
+            } else {
+                displayMessage("Veuillez remplir tous les champs correctement", "error");
+            }
+        });
+    }
 
     function validateEmail(email) {
         const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -110,8 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function sendFormData(action, data) {
         try {
-            const response = await fetch('https,//example.com/api/${action}',
-                {
+            const response = await fetch(`https://example.com/api/${action}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -128,47 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(error.message || 'Une erreur inconnue s\'est produite.');
         }
     }
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Contact script loaded");
-    
-    // Ajouter un événement de soumission au formulaire
-    contactForm.addEventListener('submit', function(event) {
-        // Empêcher l'envoi par défaut du formulaire
-        event.preventDefault();
-
-        // Récupérer les valeurs des champs de formulaire
-        const name = contactForm.querySelector('input[type="text"]').value.trim();
-        const email = contactForm.querySelector('input[type="email"]').value.trim();
-        const message = contactForm.querySelector('textarea').value.trim();
-
-        
-        // Vérifier que tous les champs sont remplis
-        if (name === '' || email === '' || message === '') {
-            // Afficher une alerte si un ou plusieurs champs sont vides
-            alert('Veuillez remplir tous les champs.');
-            return;
-        }
-
-        // Afficher les valeurs des champs dans la console (pour le débogage)
-        console.log('Nom:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        // Réinitialiser le formulaire après l'envoi
-        contactForm.reset();
-        // Afficher un message de succès
-        alert('Votre message a été envoyé avec succès!');
-    });
-
-    // Sélectionner tous les liens sociaux
-    const socialLinks = document.querySelectorAll('.social-icons a');
-
-    // Ajouter un événement de clic à chaque lien social
-    socialLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Empêcher l'action par défaut du lien
-            event.preventDefault();
-            // Afficher un message d'alerte pour indiquer que la fonctionnalité est en cours de développement
-            alert('Fonctionnalité de connexion sociale en cours de développement.');
-       });
-    });
+});
